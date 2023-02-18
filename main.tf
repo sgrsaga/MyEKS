@@ -10,10 +10,10 @@ terraform {
 
   backend "s3" {
     # Update the remote backend below to support your environment
-    bucket         = "clowd-haus-iac-us-east-1"
-    key            = "eks-reference-architecture/eks-managed-node-group/us-east-1/terraform.tfstate"
-    region         = "us-east-1"
-    dynamodb_table = "clowd-haus-terraform-state"
+    bucket         = "sgrsaga-aws-eks-20230213"
+    key            = "terraform.tfstate"
+    region         = "ap-south-1"
+    dynamodb_table = "cloud-host-terraform-state"
     encrypt        = true
   }
 }
@@ -33,7 +33,7 @@ provider "aws" {
 
 locals {
   name        = "eks-ref-arch-eks-mng"
-  region      = "us-east-1"
+  region      = "ap-south-1"
   environment = "nonprod"
 
   vpc_cidr = "10.0.0.0/16"

@@ -20,8 +20,8 @@ module "eks_bottlerocket" {
       ami_type = "BOTTLEROCKET_x86_64"
       platform = "bottlerocket"
 
-      instance_types = ["m6i.large", "m5.large", "m5n.large", "m5zn.large"]
-      capacity_type  = "SPOT"
+      instance_types = ["t3.small"]
+      capacity_type  = "ON_DEMAND"
 
       min_size     = 1
       max_size     = 3
