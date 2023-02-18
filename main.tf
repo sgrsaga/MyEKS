@@ -11,7 +11,7 @@ terraform {
   backend "s3" {
     # Update the remote backend below to support your environment
     bucket         = "sgrsaga-aws-eks-20230213"
-    key            = "terraform.tfstate"
+    key            = "newterraform.tfstate"
     region         = "ap-south-1"
     dynamodb_table = "cloud-host-terraform-state"
     encrypt        = true
